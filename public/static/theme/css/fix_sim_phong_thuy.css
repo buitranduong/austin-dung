@@ -1,0 +1,69 @@
+.pagination{
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.pt-block-filter{
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 0 15px;
+}
+#advance_filter_block_new{
+    margin: 0;
+    padding-bottom: 15px;
+}
+.result-sim__header{padding: 0}
+.page-category .choose-filter{
+    padding: 0 0 10px;
+}
+#pt-sim-container{
+    background-color: #FFFFFF;
+}
+.page-category .tbl-category-pc tr td.no-padding:not(.diem){
+    padding: 0 !important;
+}
+.ic-pt-small{
+    background-size: cover !important;
+    width: 50px !important;
+    height: 23px !important;
+}
+.ic.ic-vinaphone.ic-pt-small{
+    background-position: -54px 3px !important;
+}
+.ic.ic-mobifone.ic-pt-small{
+    background-position: -106px 3px !important;
+}
+.ic.ic-vietnamobile.ic-pt-small{
+    background-position: -160px 3px !important;
+}
+.ic.ic-itelecom.ic-pt-small{
+    background-position: -211px 3px !important;
+}
+.ic.ic-wintel.ic-pt-small{
+    background-position: -265px 3px !important;
+}
+.ic.ic-gmobile.ic-pt-small{
+    background-position: -317px 3px !important;
+}
+.ic.ic-mayban.ic-pt-small{
+    background-position: -415px 3px !important;
+}
+.text-pt-price,
+.link-dien-giai{
+    font-size: 80%;
+}
+table {
+    border-collapse: collapse;
+    margin: 0 0 1.5em;
+    width: 100%;
+    border: solid 1px;
+    border-spacing: 0;
+}
+tr {
+    border: solid 1px;
+}
+td, th {
+    padding: 5px;
+    border: solid 1px;
+}

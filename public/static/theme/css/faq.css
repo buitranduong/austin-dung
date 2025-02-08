@@ -1,0 +1,41 @@
+#faq h3{
+    text-align: center;
+}
+#faq .question {
+    background-color: #f9f9f9;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    border-top: 1px solid #cccccc;
+    text-decoration: none;
+}
+#faq .answer {
+    padding: 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+/* Chỉ áp dụng hover cho thiết bị hỗ trợ chuột */
+@media (hover: hover) and (pointer: fine) {
+    #faq .question.active, .question:hover {
+        background-color: #ccc;
+    }
+}
+
+/* Áp dụng CSS cho thiết bị cảm ứng */
+@media (hover: none) and (pointer: coarse) {
+    #faq .question.active, .question:active,
+    #faq .question.active, .question:target {
+        background-color: #ccc;
+    }
+}

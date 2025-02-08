@@ -1,0 +1,106 @@
+figure {
+    display: inline-block;
+    margin: 1em 0;
+}
+
+figure.align-left {
+    float: left;
+}
+
+figure.align-right {
+    float: right;
+}
+
+figure figcaption {
+    margin: 0.8075em 0;
+    text-align: center;
+    color: rgb(60, 60, 60);
+}
+figure + h1,
+figure + h2,
+figure + h3,
+figure + h4,
+figure + h5,
+figure + h6{
+    margin-top: 0;
+}
+.page-container h1{
+    font-size: 127%;
+    margin-block: 0.83em;
+}
+.page-container .entry-content{
+    background-color: white;
+    padding: 5px;
+    border: 1px solid rgb(218, 218, 218);
+}
+.entry-content{
+    text-align: justify;
+}
+.wp-block-table {
+    margin: 0 0 1em;
+    overflow-x: auto;
+}
+table {
+    border-collapse: collapse;
+    margin: 0 0 1.5em;
+    width: 100%;
+    border: solid 1px;
+    border-spacing: 0;
+}
+tr {
+    border: solid 1px;
+}
+td, th {
+    padding: 5px;
+    border: solid 1px;
+}
+.has-text-align-center {
+    text-align: center;
+}
+.post-author-box .post-author-img{
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.page-category .pagination,
+.page-category .text-center.mt-15.mb-15{
+    display: none;
+}
+.post-page .link-category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+}
+.blog-search-input{
+    padding: 11px 16px;
+    border-radius: 2px 0 0 2px;
+    -webkit-border-radius: 2px 0 0 2px;
+    border: 0 none;
+    outline: 0 none;
+    width: 100%;
+    border-top: 1px solid #ffe11b;
+    border-left: 1px solid #ffe11b;
+    border-bottom: 1px solid #ffe11b;
+}
+.blog-search-btn{
+    background-color: #ffe11b;
+    border: 1px solid #ffe11b;
+    border-radius: 0 2px 2px 0;
+    color: #565656;
+    padding: 11px 12px;
+    cursor: pointer;
+    text-align: center;
+}
+.post-page .link-category a{
+    font-size: 100%;
+}
+.icon-google-news{
+    width: 120px;
+}
+.text-google-news{
+    font-size: 100%;
+    color: #888888;
+    text-transform: none;
+    font-weight: normal;
+}

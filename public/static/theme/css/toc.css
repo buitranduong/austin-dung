@@ -1,0 +1,89 @@
+.toc-wrap {
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    position: relative;
+    width: auto;
+    display: table;
+    margin-bottom: 20px;
+}
+.toc-wrap ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+.toc-wrap ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #ccc;
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+.toc-wrap .toc-title {
+    text-align: center;
+    font-size: 120%;
+    margin-top: 1rem;
+}
+.toc-wrap #toc {
+    max-height: calc(100vh - 150px);
+    padding: 0 1rem;
+    overflow-y: scroll;
+    display: table;
+}
+.toc-wrap #toc ul{
+    padding: 0;
+    margin-top: 5px;
+}
+.toc-wrap #toc .toc-active {
+    font-weight: bold;
+    color: #2563eb;
+}
+.toc-wrap #toc .toc-item {
+    padding: 0.1em 0;
+    list-style: none;
+}
+.toc-wrap #toc .toc-item a {
+    padding: 0.25em 0.5em;
+    color: #444;
+    box-shadow: none;
+    text-decoration: none;
+    text-shadow: none;
+}
+.toc-wrap #toc .toc-item a:visited {
+    color: #9f9f9f;
+}
+.toc-wrap #toc .toc-h2 {
+    margin-left: 0.5em;
+}
+.toc-wrap #toc .toc-h3 {
+    margin-left: 1.75em;
+}
+.toc-wrap #toc .toc-h4 {
+    margin-left: 3em;
+}
+.toc-wrap #toc .toc-h5 {
+    margin-left: 4.25em;
+}
+.toc-wrap #toc .toc-h6 {
+    margin-left: 5.5em;
+}
+/* Chỉ áp dụng hover cho thiết bị hỗ trợ chuột */
+@media (hover: hover) and (pointer: fine) {
+    .toc-wrap #toc a:hover {
+        text-decoration: underline;
+    }
+    .toc-wrap #toc .toc-item a:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Áp dụng CSS cho thiết bị cảm ứng */
+@media (hover: none) and (pointer: coarse) {
+    .toc-wrap #toc a:active,
+    .toc-wrap #toc a:target{
+        text-decoration: underline;
+    }
+    .toc-wrap #toc .toc-item a:active,
+    .toc-wrap #toc .toc-item a:target{
+        text-decoration: underline;
+    }
+}
+

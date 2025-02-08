@@ -1,0 +1,80 @@
+#dienthoai{
+    width: 100%;
+    padding: 10px 10px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+#valuation_form{
+    background: #cfe6d0;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+#valuation_form h3{
+    text-align: center;
+}
+#valuation_form label{
+    font-size: 15px;
+}
+.btn-mua {
+    color: #fff;
+    background-color: #f0ad4e;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #eea236;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 150px;
+    margin: 0 auto;
+}
+.error-hint {
+    font-style: italic;
+    color: #dc0d0d;
+    font-size: 12px;
+    padding: 3px;
+}
+.hide {
+    display: none !important;
+}
+.submit-datsim{
+    text-align: center;
+    margin: 1em 0;
+}
+.valuation-result {
+    padding: 15px;
+    background: #c2c7b8;
+    margin: 10px 0;
+    color: #005064 !important;
+    font-weight: bold;
+}
+/* Chỉ áp dụng hover cho thiết bị hỗ trợ chuột */
+@media (hover: hover) and (pointer: fine) {
+    .btn-mua:hover {
+        background: #f60;
+    }
+}
+
+/* Áp dụng CSS cho thiết bị cảm ứng */
+@media (hover: none) and (pointer: coarse) {
+    .btn-mua:active,
+    .btn-mua:target {
+        background: #f60;
+    }
+}

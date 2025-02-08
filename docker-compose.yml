@@ -1,0 +1,39 @@
+services:
+  # Apache webserver service
+  news:
+    container_name: news
+    build:
+      # Dockerfile path
+      context: .
+      dockerfile: Dockerfile
+    # Mount the local ./app directory to /var/www/html in the container
+    volumes:
+      - .:/var/www/html
+    # Map port 80 on the host to port 80 on the container
+    ports:
+      - "8081:80"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: news
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: news_postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6380:6379"
+    command: redis-server --save 20 1 --loglevel warning
+    volumes:
+      - cache_data:/data
+
+volumes:
+  cache_data:
+  postgres_data:

@@ -1,0 +1,169 @@
+#page_loader {
+    background: hsla(0, 0%, 100%, .6) 50% no-repeat;
+    bottom: 0;
+    display: block;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 99999;
+}
+#page_loader .logo {
+    /*background-image: url();*/
+    border-radius: 50%;
+    height: 50px;
+    left: calc(50% - 25px);
+    position: absolute;
+    top: calc(50% - 25px);
+    width: 50px;
+    z-index: 10;
+}
+#page_loader .loader {
+    animation: rotate .35s linear infinite;
+    background: linear-gradient(270deg, #fff 30%, #288AD6);
+    border: 0;
+    border-radius: 50%;
+    height: 90px;
+    left: calc(50% - 45px);
+    position: absolute;
+    top: calc(50% - 45px);
+    width: 90px;
+}
+#page_loader .loader:before {
+    background: #fff;
+    border-radius: 100%;
+    bottom: 6px;
+    content: " ";
+    left: 6px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+}
+@keyframes rotate{
+    to{
+        transform:rotate(1turn)
+    }
+}
+@media only screen and (max-width: 767px) {
+    .page-category .tbl-category-pc .simso a{
+        font-size: 100% !important;
+    }
+    .page-category .text-tra-gop {
+        font-weight: bold !important;
+        font-size: 85% !important;
+    }
+    .page-category .lnk-diendai{
+        font-weight: normal !important;
+        font-size: 85% !important;
+    }
+    .page-category .tbl-category-pc tr td:not(.diem){
+        padding: 5px !important;
+    }
+    .phongthuy-details .note_phongthuy p,
+    .sim-detail .tra-gop-inner label{
+        width: 100% !important;
+    }
+}
+.wrap-phongthuy .article_info .dunien li{
+    margin: 0 2px;
+}
+.common-keyword{
+    clear:both
+}
+.sim-detail #so_tien_moi_thang{
+    font-weight: bold;
+}
+.dynamic-height-wrap{
+    text-align: justify;
+}
+.page-category .tbl-category-pc .text-price{
+    text-align: right;
+}
+figure{
+    margin: 0;
+}
+figure figcaption{
+    text-align: center;
+    color: #333333;
+}
+.table{
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #1b1b1b;
+    vertical-align: top;
+    border-color: #dee2e6;
+    padding: .5rem;
+}
+.table-bordered>:not(caption)>* {
+    border-width: 1px 0;
+}
+.table-bordered, .table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+    padding: .5rem;
+}
+.text-center{
+    text-align: center !important;
+}
+.advance_filter_block_new{
+    margin-block: 5px 15px;
+}
+.page-category .category-filter-price{
+    padding: 0 !important;
+}
+.scroll-x{
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+.page-category .btn-buy{
+    background-color: #d9534f !important;
+    border-color: #d43f3a !important;
+}
+.page-category .text-tra-gop{
+    font-size: 99%;
+}
+.page-category .lnk-diendai{
+    font-size: 90%;
+}
+.text-right{
+    text-align: right;
+}
+@media only screen and (max-width: 767px) {
+    .btn-read-more{
+        background: #265928;
+        color: #fff;
+        border: none;
+    }
+}
+.advance_filter_block_new .advanced-list-price label a,
+.advance_filter_block_new .advance-filter-pc label a{
+    padding: 5px 0;
+}
+.advance_filter_block_new .filter-item-tel:last-child li label{
+    padding: 5px 12px;
+}
+.advance_filter_block_new .filter-item-tel.prefix-first-number ul li label{
+    height: 32px;
+}
+.advance_filter_block_new .filter-item-tel select{
+    padding: 10px 12px;
+    width: 100%;
+}
+.advance_filter_block_new .advanced-list-price,
+.advance_filter_block_new .advance-filter-pc{
+    gap: 8px;
+}
+.advance_filter_block_new .advanced_filter li.active .advanced-criteria {
+    background: #ffeaed !important;
+}
+.advance_filter_block_new .filter-item-tel .select-block.active,
+.advance_filter_block_new .filter-item-tel .select-block.active select,
+.advance_filter_block_new .filter-item-tel .select-block.active:after{
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+.advance_filter_block_new .filter-item-tel .select-block.active:after{
+    background-image: url(../images/arrow-right-red.svg);
+    transform: rotate(90deg);
+}

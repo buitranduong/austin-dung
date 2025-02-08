@@ -1,0 +1,142 @@
+.thu-mua-sim .clr-red {
+  color: #ff0000;
+}
+.thu-mua-sim .clr-blue {
+  color: #0000cd;
+}
+.thu-mua-sim .con-thu-mua {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+@media only screen and (max-width: 767px) {
+  .thu-mua-sim .con-thu-mua {
+    border: none;
+  }
+}
+.thu-mua-sim .con-thu-mua h3 {
+  font-size: 113%;
+  line-height: 1.2;
+  margin-top: 0;
+}
+.thu-mua-sim .con-thu-mua p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.thu-mua-sim .con-thu-mua .text-call {
+  font-size: 155%;
+  font-weight: bold;
+}
+.thu-mua-sim .con-thu-mua .text-call a {
+  text-decoration: none;
+}
+.thu-mua-sim .con-thu-mua .sub-title1 {
+  font-size: 127%;
+  color: #0000cd;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.thu-mua-sim .con-thu-mua .list-item-price {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.thu-mua-sim .con-thu-mua .list-item-price li {
+  padding: 0.5em 0 0.5em 1em;
+}
+.thu-mua-sim .con-thu-mua .list-item-price li:first-child {
+  padding-top: 0;
+}
+.thu-mua-sim .con-thu-mua .list-item-price li img {
+  margin-right: 0.2em;
+  vertical-align: middle;
+}
+.thu-mua-sim .order-form {
+  padding: 1px 0 20px 0;
+  background: #2196f3;
+  color: #fff;
+  text-align: center;
+}
+.thu-mua-sim .order-form-inner {
+  background: #c7eeff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.thu-mua-sim .order-form-inner input {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 3px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  user-select: none;
+}
+.thu-mua-sim .order-form-inner .btn-mua {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  display: inline-block;
+  padding: 3px 8px;
+  margin-bottom: 0;
+  font-size: 99%;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.thu-mua-sim .order-form h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 113%;
+}
+.thu-mua-sim-success {
+  margin-top: 50px;
+  text-align: center;
+  color: #3c763d;
+  background-color: #dff0d8;
+  padding: 15px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-align: center;
+}
+.thu-mua-sim-success h1 {
+  font-size: 127%;
+}
+.thu-mua-sim-success p {
+  line-height: 1.2;
+}
+
+.link-back-page {
+  padding-top: 30px;
+}
+.link-back-page a {
+  color: #0000cd;
+  font-weight: bold;
+  text-decoration: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .link-back-page a:hover {
+    text-decoration: underline;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .link-back-page a:active {
+    text-decoration: underline;
+  }
+}

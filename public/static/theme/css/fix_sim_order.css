@@ -1,0 +1,60 @@
+.form-order .form-group .btn-submit-tra-gop,
+.form-order .form-group .btn-submit{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    text-transform: none !important;
+    max-width: 50% !important;
+    font-size: 110% !important;
+}
+.form-order .form-group .btn-submit-tra-gop{
+    background: #107BC1 !important;
+}
+.form-order .form-group .btn-submit-tra-gop > span:first-child,
+.form-order .form-group .btn-submit > span:first-child{
+    text-transform: uppercase !important;
+    font-size: 100% !important;
+    font-weight: bold !important;
+}
+.form-order .form-group .btn-submit-tra-gop > span + span,
+.form-order .form-group .btn-submit > span + span{
+    font-size: 85%;
+    font-weight: normal !important;
+}
+.form-order .form-group .btn-submit{
+    background: #E74C3C !important;
+}
+.guid-buy{
+    padding: 10px 20px !important;
+}
+.form-order .form-group .detail_contact{
+    max-width: 100% !important;
+}
+.form-order .form-group .btn-submit.btn-khong-tra-gop{
+    max-width: 100% !important;
+}
+.invalid-feedback-message{
+    background-color: #f8d7da;
+    color: #58151c;
+    border: 1px solid #f1aeb5;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-bottom: 10px;
+}
+.invalid-feedback-message ul{
+    margin: 0;
+}
+input.is-invalid{
+    border-color: red !important;
+}
+@media only screen and (max-width: 767px) {
+    .form-order .form-group .btn-submit-tra-gop > span + span,
+    .form-order .form-group .btn-submit > span + span{
+        font-size: 75%;
+    }
+}
+.sim-detail .con-sim-detail label{
+    width: 100px !important;
+}

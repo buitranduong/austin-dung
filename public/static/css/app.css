@@ -1,0 +1,70 @@
+:root,
+[data-bs-theme=light] {
+    --bs-font-sans-serif: 'Nunito', sans-serif;
+}
+.table-light{
+    --bs-table-bg: #d1d5db;
+}
+.bi{
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+.full-height {
+    min-height: calc(100vh - 59px);
+}
+#app{
+    background-color: rgba(0, 0, 0, .1);
+    min-height: calc(100vh - 59px);
+}
+#login{
+    background-color: rgba(0, 0, 0, .1);
+    height: 100vh;
+}
+.nav{
+    --bs-nav-link-font-size: 1rem;
+    --bs-nav-link-font-weight: 700;
+    --bs-nav-link-padding-x: .5rem;
+}
+.link-body-emphasis{
+    --bs-link-opacity: .75;
+    &:hover{
+        --bs-link-opacity: 1;
+    }
+}
+select:required:invalid {
+    color: gray;
+}
+option[value=""][disabled] {
+    display: none;
+}
+option {
+    color: black;
+}
+.custom-file-button input[type=file] {
+    margin-left: -2px !important;
+}
+.custom-file-button input[type=file]::-webkit-file-upload-button {
+    display: none;
+}
+.custom-file-button input[type=file]::file-selector-button {
+    display: none;
+}
+.custom-file-button:hover label {
+    background-color: #dde0e3;
+    cursor: pointer;
+}
+.w-sidebar{
+    width: 280px;
+}
+@media (max-width: 1399.98px) {
+    .custom-card-header{
+        --bs-card-cap-padding-x: 0.5rem;
+    }
+    .custom-card-body{
+        --bs-card-spacer-y: 0.5rem;
+        --bs-card-spacer-x: 0.5rem;
+    }
+    .w-sidebar{
+        width: 220px;
+    }
+}

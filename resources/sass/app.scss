@@ -1,0 +1,50 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+$full-height: calc(100vh - 59px);
+
+$font-family-sans-serif: system-ui;
+
+.bi{
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+.full-height {
+    min-height: $full-height;
+}
+#app{
+    background-color: rgba(0, 0, 0, .1);
+    min-height: $full-height;
+}
+#login{
+    background-color: rgba(0, 0, 0, .1);
+    height: 100vh;
+}
+.nav{
+    --bs-nav-link-font-size: 1rem;
+    --bs-nav-link-font-weight: 700;
+    --bs-nav-link-padding-x: .5rem;
+}
+.link-body-emphasis{
+    --bs-link-opacity: .75;
+    &:hover{
+        --bs-link-opacity: 1;
+    }
+}
+
+select:required:invalid {
+    color: gray;
+}
+option[value=""][disabled] {
+    display: none;
+}
+option {
+    color: black;
+}
