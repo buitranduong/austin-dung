@@ -1,8 +1,16 @@
-@extends('layouts.theme')
+@extends('layouts.blog')
 
 @section('content')
-    <div class="container page-container">
-        <h1>{{ $post->title }}</h1>
-        <div class="entry-content">{!! $post->content !!}</div>
-    </div>
+    <main id="contents">
+        <div class="container post-page">
+            <section class="post-main">
+                <div class="header-page">
+                    <h1 class="entry-title">
+                        {{ $post->title }}
+                    </h1>
+                    <div class="entry-content">{!! $post->content !!}</div>
+                </div>
+            </section>
+        </div>
+    </main>
 @endsection

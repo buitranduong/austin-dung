@@ -7,13 +7,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="/">SIM SỐ ĐẸP</a></li>
-                <li><a href="/sim-phong-thuy">SIM PHONG THỦY</a></li>
-                <li><a href="/sim-dep-tra-gop">SIM TRẢ GÓP</a></li>
-                <li><a href="/dinh-gia-sim-ai">ĐỊNH GIÁ SIM</a></li>
-                <li><a href="/thu-mua-sim-so-dep">CẦM SIM - THU MUA SIM</a></li>
-                <li><a href="/bai-viet/cach-mua-sim-va-thanh-toan-65/">THANH TOÁN</a></li>
-                <li><a href="/bai-viet/">TIN TỨC</a></li>
+                <li><a href="/">TRANG CHỦ</a></li>
+                <li><a href="/author/austindung">GIỚI THIỆU</a></li>
+                <li><a href="/chu-de/tin-nguong">TÍN NGƯỠNG</a></li>
+                <li><a href="/chu-de/cung-hoang-dao">CUNG HOÀNG ĐẠO</a></li>
+                <li><a href="/lien-he">LIÊN HỆ</a></li>
             </ul>
         </nav>
     </div>

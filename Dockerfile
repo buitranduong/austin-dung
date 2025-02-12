@@ -1,7 +1,7 @@
 FROM php:8.3-fpm
 
 # COMPOSER_ALLOW_SUPERUSER=1
-COPY deploy/php.ini /usr/local/etc/php/php.ini
+#COPY deploy/php.ini /usr/local/etc/php/php.ini
 
 # Install system dependencies
 

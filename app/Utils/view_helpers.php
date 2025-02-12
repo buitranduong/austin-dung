@@ -55,15 +55,17 @@ if(!function_exists('feature_image'))
     function feature_image($path, $width, $height): string
     {
         $setting = new ImageSetting();
-        $dir = pathinfo($path, PATHINFO_DIRNAME);
-        $filename = pathinfo($path, PATHINFO_BASENAME);
+//        $dir = pathinfo($path, PATHINFO_DIRNAME);
+//        $filename = pathinfo($path, PATHINFO_BASENAME);
         $ext = pathinfo($path, PATHINFO_EXTENSION);
         $image = str_replace(".{$ext}", "-{$width}x{$height}.{$setting->extension}", $path);
-        if(!file_exists(storage_path("app/public/{$dir}/{$image}"))) {
-            $imageConvertService = app(ImageConvertService::class);
-            $imageConvertService->fromPath(storage_path("app/public/{$dir}/{$filename}"))
-                ->convertAllSize(storage_path("app/public/{$dir}"));
-        }
+//        if(!file_exists(storage_path("app/public/{$dir}/{$image}"))) {
+//            try {
+//                $imageConvertService = app(ImageConvertService::class);
+//                $imageConvertService->fromPath(storage_path("app/public/{$dir}/{$filename}"))
+//                    ->convertAllSize(storage_path("app/public/{$dir}"));
+//            }catch (Exception $e){}
+//        }
         return asset("storage/$image");
     }
 }

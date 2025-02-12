@@ -46,32 +46,35 @@ class BlogController extends Controller
             ->take(5)
             ->get();
         $feature_post = $posts->first();
+        $ignore_id = $posts->pluck('id')->toArray();
+        $phong_thuy_sim_posts = Category::with(['posts' => function ($query) use ($ignore_id) {
+            $query->published()
+                ->whereNotIn('posts.id', $ignore_id)
+                ->latest('published_at')
+                ->take(5);
+        }])
+            ->published()
+            ->where('slug', 'tin-nguong')
+            ->first();
+        $sim_so_dep_posts = Category::with(['posts' => function ($query) use ($ignore_id) {
+            $query->published()
+                ->whereNotIn('posts.id', $ignore_id)
+                ->latest('published_at')
+                ->take(5);
+        }])
+            ->published()
+            ->where('slug', 'cung-hoang-dao')
+            ->first();
+//        $tu_vi_posts = Category::with(['posts' => function ($query) {
+//            $query->published()
+//                ->latest('published_at')
+//                ->take(12);
+//        }])
+//            ->published()
+//            ->where('slug', 'tu-vi')
+//            ->first();
         //shift feature post
         $posts->shift();
-        $phong_thuy_sim_posts = Category::with(['posts' => function ($query) {
-            $query->published()
-                ->latest('published_at')
-                ->take(5);
-        }])
-            ->published()
-            ->where('slug', 'phong-thuy-sim')
-            ->first();
-        $sim_so_dep_posts = Category::with(['posts' => function ($query) {
-            $query->published()
-                ->latest('published_at')
-                ->take(5);
-        }])
-            ->published()
-            ->where('slug', 'sim-so-dep')
-            ->first();
-        $tu_vi_posts = Category::with(['posts' => function ($query) {
-            $query->published()
-                ->latest('published_at')
-                ->take(12);
-        }])
-            ->published()
-            ->where('slug', 'tu-vi')
-            ->first();
         $allCategories = CacheModelService::getBlogCategories(false);
         if ($allCategories) {
             foreach ($allCategories as $category) {
@@ -91,7 +94,7 @@ class BlogController extends Controller
             }
         }
         $this->_useSeoMetaTags(new BlogMetaData(new Category()));
-        return view('theme.blog.feature', compact('posts','feature_post','phong_thuy_sim_posts','sim_so_dep_posts','tu_vi_posts'));
+        return view('theme.blog.feature', compact('posts','feature_post','phong_thuy_sim_posts','sim_so_dep_posts'));
     }
     public function post(SchemaBlog $schema, string $slug, ?string $view = null)
     {

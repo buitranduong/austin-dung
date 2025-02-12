@@ -8,7 +8,7 @@
                     @if(!empty($post->category))
                         <div class="link-category">
                             <a href="{{ blog_route('blog.category',[$post->category->slug]) }}" title="{{ $post->category->name }}">{{ $post->category->name }}</a>
-                            <a target="_blank" href="https://news.google.com/publications/CAAqBwgKMMXGoAsw0tC4Aw/sections/CAQqEAgAKgcICjDFxqALMNLQuAMwr575Cw?hl=vi&gl=VN&ceid=VN%3Avi" title="Theo dõi STL trên google news">
+                            <a style="display: none" target="_blank" href="https://news.google.com/publications/CAAqBwgKMMXGoAsw0tC4Aw/sections/CAQqEAgAKgcICjDFxqALMNLQuAMwr575Cw?hl=vi&gl=VN&ceid=VN%3Avi" title="Theo dõi STL trên google news">
                                 <span class="text-google-news view_pc">Theo dõi STL trên - </span>
                                 <img class="icon-google-news" src="/static/theme/images/ggnewslogo.svg" alt="Theo dõi STL trên Google news">
                             </a>

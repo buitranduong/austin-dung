@@ -13,7 +13,7 @@
                     <x-theme.section.blog.category-post :category="$sim_so_dep_posts"/>
                 </div>
             </div>
-             <x-theme.section.blog.grid-post :category="$tu_vi_posts"/>
+        {{--<x-theme.section.blog.grid-post :category="$tu_vi_posts"/>--}}
         </section>
         @include('components.theme.aside.blog.aside-right')
     </main>
