@@ -17,6 +17,7 @@ services:
 
   postgres:
     image: postgres:latest
+    container_name: news-postgres
     restart: always
     environment:
       POSTGRES_DB: news
@@ -30,6 +31,7 @@ services:
 
   redis:
     image: redis:latest
+    container_name: news-redis
     ports:
       - "6380:6379"
     command: redis-server --save 20 1 --loglevel warning
