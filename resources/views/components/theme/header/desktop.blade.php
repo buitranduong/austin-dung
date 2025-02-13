@@ -2,7 +2,7 @@
     <div class="container">
         <div class="img-header">
             <a href="/" title="Sim Thăng Long">
-                <img src="{{ asset('static/theme/images/sim-so-dep-simthanglong.vn.png') }}" alt="Simthanglong.vn" width="972" height="148">
+                <img src="{{ asset('static/theme/images/banner.jpg') }}" alt="austindung.vn" width="972" height="148">
             </a>
         </div>
         <nav>
