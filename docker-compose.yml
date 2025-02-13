@@ -17,6 +17,7 @@ services:
 
   postgres:
     image: postgres:latest
+    restart: always
     environment:
       POSTGRES_DB: news
       POSTGRES_USER: postgres
@@ -25,6 +26,7 @@ services:
       - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./database/dump-news-202502130852.sql:/docker-entrypoint-initdb.d/init.sql
 
   redis:
     image: redis:latest
