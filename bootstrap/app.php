@@ -39,7 +39,7 @@ return Application::configure(basePath: dirname(__DIR__))
         }
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->trustProxies(at: '*');
+        $middleware->trustProxies(at: '0.0.0.0/0');
         $middleware->alias([
             'admin' => EnsureAdminIsValid::class,
             'role' => RoleMiddleware::class,
