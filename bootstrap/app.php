@@ -22,6 +22,7 @@ use Spatie\Permission\Middleware\PermissionMiddleware;
 use Spatie\Permission\Middleware\RoleOrPermissionMiddleware;
 use App\Http\Middleware\TagsCacheResponse;
 use Spatie\ResponseCache\Middlewares\DoNotCacheResponse;
+use Symfony\Component\HttpFoundation\Request as RequestAlias;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -39,7 +40,10 @@ return Application::configure(basePath: dirname(__DIR__))
         }
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->trustProxies(at: '0.0.0.0/0');
+        $middleware->trustProxies(
+            at: ['0.0.0.0/0'],
+            headers: RequestAlias::HEADER_X_FORWARDED_FOR
+        );
         $middleware->alias([
             'admin' => EnsureAdminIsValid::class,
             'role' => RoleMiddleware::class,
