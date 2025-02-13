@@ -11,7 +11,7 @@ services:
       - .:/var/www/html
     # Map port 80 on the host to port 80 on the container
     ports:
-      - "8081:80"
+      - "8765:80"
     depends_on:
       - postgres
 
