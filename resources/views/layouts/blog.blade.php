@@ -5,8 +5,11 @@
     {!! Meta::toHtml() !!}
     {!! Meta::placement('head_script_after')->toHtml() !!}
 </head>
-<body class="{{ $phone ? 'mobile' : 'pc' }}" tabindex="0">
+<body id="{{ $homepage ? 'homepage' : 'blog' }}" class="{{ $phone ? 'mobile' : 'pc' }}" tabindex="0">
 {!! Meta::placement('body_script_before')->toHtml() !!}
+@if($homepage)
+    <h1>{{ $generalSetting->site_name }}</h1>
+@endif
 @include('components.theme.header.mobile')
 @include('components.theme.header.desktop')
 @yield('content')

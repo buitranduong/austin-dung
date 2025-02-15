@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /bai-viet/bai-viet/
-Disallow: /redirect.php
-Sitemap: https://simthanglong.vn/sitemap.xml

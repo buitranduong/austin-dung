@@ -23,7 +23,7 @@
                 </a>
             </h3>
             <div class="post-meta">
-                <time>{{ $post->published_at->isoFormat('D MMMM, YYYY') }}</time> - {{ __('by') }} <a href="{{ blog_route('blog.author',[$post->createdByUser->slug]) }}" title="{{ $post->createdByUser->name }}">{{ $post->createdByUser->name }}</a>
+                <time datetime="{{ $post->published_at->format('Y-m-d') }}">{{ $post->published_at->isoFormat('D MMMM, YYYY') }}</time> - {{ __('by') }} <a href="{{ blog_route('blog.author',[$post->createdByUser->slug]) }}" title="{{ $post->createdByUser->name }}">{{ $post->createdByUser->name }}</a>
             </div>
             <div class="post-entry-summary">{{ !empty($post->excerpt) ? $post->excerpt : \Illuminate\Support\Str::of($post->content)->words(30)->stripTags()->toHtmlString() }}</div>
         @else
@@ -33,7 +33,7 @@
                         {{ $post->title }}
                     </a>
                 </h3>
-                <time class="meta">{{ $post->published_at->isoFormat('D MMMM, YYYY') }}</time>
+                <time datetime="{{ $post->published_at->format('Y-m-d') }}" class="meta">{{ $post->published_at->isoFormat('D MMMM, YYYY') }}</time>
             </div>
         @endif
     </article>
