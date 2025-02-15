@@ -23,6 +23,7 @@ use App\Utils\BlogMetaData;
 use Butschster\Head\Contracts\MetaTags\MetaInterface;
 use Butschster\Head\MetaTags\TagsCollection;
 use Butschster\Head\Packages\Entities\OpenGraphPackage;
+use Butschster\Head\Packages\Entities\TwitterCardPackage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -79,7 +80,7 @@ class BlogController extends Controller
         if ($allCategories) {
             foreach ($allCategories as $category) {
                 $this->meta
-                    ->addLink('alternate'.$category->id, ['href'=>blog_route('blog.category',[$category->slug]),'hreflang'=>'vi'])
+                    ->addLink('alternate'.$category->id, ['rel'=>'alternate','href'=>blog_route('blog.category',[$category->slug]),'hreflang'=>'vi_VN'])
                     ->addLink('alternate-rss'.$category->id, [
                         'href'=>blog_route('blog.category',[$category->slug, 'view'=>'json']),
                         'rel'=>'alternate',
@@ -93,10 +94,16 @@ class BlogController extends Controller
                     ]);
             }
         }
-        $this->_useSeoMetaTags(new BlogMetaData(new Category()));
+        $this->meta->setKeywords('Austin Dũng')
+            ->addLink('canonical', [
+            'href'=>blog_route('blog.feature'),
+        ]);
+        $homepage = new Category();
+        $homepage->featured_image = 'austindung.jpg';
+        $this->_useSeoMetaTags(new BlogMetaData($homepage));
         return view('theme.blog.feature', compact('posts','feature_post','phong_thuy_sim_posts','sim_so_dep_posts'));
     }
-    public function post(SchemaBlog $schema, string $slug, ?string $view = null)
+    public function post(BlogSetting $blogSetting, SchemaBlog $schema, string $slug, ?string $view = null)
     {
         $post = Post::withoutGlobalScope('post-page')
             ->with(['categories:id,name,slug','tags:id,name,slug'])
@@ -146,7 +153,7 @@ class BlogController extends Controller
                     !empty($post->category->slug) ? blog_route('blog.category',[$post->category->slug]) : '',
                     'feed::json',
                     $post->category->description ?? '',
-                    'vi',
+                    'vi_VN',
                     '',
                     'json',
                     '',
@@ -154,7 +161,7 @@ class BlogController extends Controller
             default:
                 if($post->type == PostType::Post){
                     $this->meta
-                        ->addLink('alternate', ['href'=>blog_route('blog.post',[$post->slug]),'hreflang'=>'vi'])
+                        ->addLink('alternate', ['href'=>blog_route('blog.post',[$post->slug]),'hreflang'=>'vi_VN'])
                         ->addLink('alternate-rss', [
                             'href'=>blog_route('blog.post',[$post->slug, 'view'=>'json']),
                             'rel'=>'alternate',
@@ -165,9 +172,18 @@ class BlogController extends Controller
                             'rel'=>'alternate',
                             'type'=>'application/rss+xml',
                             'title'=>$post->title,
+                        ])
+                        ->addMeta('published_time',[
+                            'property' => 'article:published_time',
+                            'content' => $post->published_at->timezone($blogSetting->timezone)->toIso8601String(),
+                        ])
+                        ->addMeta('modified_time',[
+                            'property' => 'article:modified_time',
+                            'content' => $post->updated_at->timezone($blogSetting->timezone)->toIso8601String(),
                         ]);
                 }
                 $this->meta
+                    ->addMeta('author', ['content'=>$post->createdByUser->name])
                     ->addLink('amphtml', [
                         'href'=>route('blog.post.amp',[$post->slug]),
                     ])
@@ -182,7 +198,7 @@ class BlogController extends Controller
         return view($this->getView("theme.blog.{$post->type->value}", $view), compact('post','related_posts'))->withShortcodes();
     }
 
-    public function amp(string $slug, SchemaBlog $schema)
+    public function amp(string $slug, SchemaBlog $schema, BlogSetting $blogSetting)
     {
         $post = Post::withoutGlobalScope('post-page')
             ->with(['categories:id,name,slug','tags:id,name,slug'])
@@ -200,6 +216,15 @@ class BlogController extends Controller
         $this->meta
             ->setCharset()
             ->addMeta('viewport',['content'=>'width=device-width,minimum-scale=1'])
+            ->addMeta('author', ['content'=>$post->createdByUser->name])
+            ->addMeta('published_time',[
+                'property' => 'article:published_time',
+                'content' => $post->published_at->timezone($blogSetting->timezone)->toIso8601String(),
+            ])
+            ->addMeta('modified_time',[
+                'property' => 'article:modified_time',
+                'content' => $post->updated_at->timezone($blogSetting->timezone)->toIso8601String(),
+            ])
             ->addLink('canonical', [
                 'href'=>blog_route('blog.post',[$post->slug]),
             ]);
@@ -243,7 +268,7 @@ class BlogController extends Controller
             );
         }
         $this->meta
-            ->addLink('alternate', ['href'=>blog_route('blog.category',[$category->slug]),'hreflang'=>'vi'])
+            ->addLink('alternate', ['href'=>blog_route('blog.category',[$category->slug]),'hreflang'=>'vi_VN'])
             ->addLink('alternate-rss', [
                 'href'=>blog_route('blog.category',[$category->slug, 'view'=>'json']),
                 'rel'=>'alternate',
@@ -284,7 +309,7 @@ class BlogController extends Controller
             );
         }
         $this->meta
-            ->addLink('alternate', ['href'=>blog_route('blog.tag',[$tag->slug]),'hreflang'=>'vi'])
+            ->addLink('alternate', ['href'=>blog_route('blog.tag',[$tag->slug]),'hreflang'=>'vi_VN'])
             ->addLink('alternate-rss', [
                 'href'=>blog_route('blog.tag',[$tag->slug, 'view'=>'json']),
                 'rel'=>'alternate',
@@ -330,7 +355,7 @@ class BlogController extends Controller
             );
         }
         $this->meta
-            ->addLink('alternate', ['href'=>blog_route('blog.author',[$author->slug]),'hreflang'=>'vi'])
+            ->addLink('alternate', ['href'=>blog_route('blog.author',[$author->slug]),'hreflang'=>'vi_VN'])
             ->addLink('alternate-rss', [
                 'href'=>blog_route('blog.author',[$author->slug, 'view'=>'json']),
                 'rel'=>'alternate',
@@ -365,7 +390,7 @@ class BlogController extends Controller
         $tags = new TagsCollection($seoMetaData->getScriptPlacements());
         $this->meta->registerTags($tags);
         $og = new OpenGraphPackage('social');
-        $og->setType('website');
+        $og->setType('article');
         $og->setSiteName(config('app.name'));
         $og->setTitle(htmlspecialchars($seoMetaData->getMetaTitle()));
         $og->setDescription(Str::of(htmlspecialchars($seoMetaData->getMetaDescription()))->stripTags());
@@ -375,6 +400,14 @@ class BlogController extends Controller
         $og->setLocale('vi_VN');
         $og->setUrl(url()->current().'/');
         $this->meta->registerPackage($og);
+        $card = new TwitterCardPackage('card');
+        $card->setType('summary');
+        $card->setTitle($seoMetaData->getMetaTitle());
+        $card->setDescription($seoMetaData->getMetaDescription());
+        if ($seoMetaData->getFeaturedImage()){
+            $card->setImage(asset("storage/{$seoMetaData->getFeaturedImage()}"));
+        }
+        $this->meta->registerPackage($card);
     }
 
     public function page(Request $request)
@@ -398,6 +431,11 @@ class BlogController extends Controller
         })->paginate($this->blogSetting->post_limit);
 
         $this->meta->setRobots('noindex, noarchive, follow');
+        $seo = new Category();
+        $seo->meta_data = [
+            'title'=>'Kết quả tìm kiếm "'.$request->get('q').'"'
+        ];
+        $this->_useSeoMetaTags(new BlogMetaData($seo));
         return view('theme.blog.search', compact('posts'));
     }
 }

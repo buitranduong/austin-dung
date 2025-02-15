@@ -25,34 +25,22 @@ class MetaTagsServiceProvider extends ServiceProvider
             $secure = request()->secure();
         }
         PackageManager::create('styles', function(Package $package) use($secure, $path) {
-            $device = DetectAgent::UseDevice();
-            if (isset($device['phone']) && $device['phone']) {
-                $package->addLink('spritestlvn',['rel'=>'preload','as'=>'image','href'=>asset($path.'/images/spritestlvn.png')]);
-                $package->addLink('logo-sim-thang-long',['rel'=>'preload','as'=>'image','href'=>asset($path.'/images/logo-sim-thang-long.svg')]);
-            }else{
-                $package->addLink('bg_colorful',['rel'=>'preload','as'=>'image','href'=>asset($path.'/images/bg_colorful.webp')]);
-                $package->addLink('menu_sp',['rel'=>'preload','as'=>'image','href'=>asset($path.'/images/menu_sp.gif')]);
-            }
-
-            $package->addLink('images',['rel'=>'preload','as'=>'image','href'=>asset($path.'/images/images.png')]);
-            $package->addLink('phone0',['rel'=>'preload','as'=>'image','href'=>asset($path.'/images/phone0.png')]);
-
             $package->addStyle(
                 'styles.css',
                 asset($path.'/css/styles.min.css?v='.self::VER, $secure),
             );
-            $package->addStyle(
-                'advance-filter.css',
-                asset($path.'/css/advance-filter.css?v='.self::VER, $secure),
-            );
-            $package->addStyle(
-                'faq.css',
-                asset($path.'/css/faq.min.css?v='.self::VER, $secure),
-            );
-            $package->addStyle(
-                'fix_list_sim.css',
-                asset($path.'/css/fix_list_sim.min.css?v='.self::VER, $secure),
-            );
+//            $package->addStyle(
+//                'advance-filter.css',
+//                asset($path.'/css/advance-filter.css?v='.self::VER, $secure),
+//            );
+//            $package->addStyle(
+//                'faq.css',
+//                asset($path.'/css/faq.min.css?v='.self::VER, $secure),
+//            );
+//            $package->addStyle(
+//                'fix_list_sim.css',
+//                asset($path.'/css/fix_list_sim.min.css?v='.self::VER, $secure),
+//            );
         });
 
         PackageManager::create('homepage', function(Package $package) use($secure, $path) {

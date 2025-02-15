@@ -20,7 +20,7 @@
                     @if($post->type != \App\Enums\PostType::Page)
                         <div class="entry-meta">
                             <span class="posted-on">
-                                <time class="entry-date published" datetime="{{ $post->published_at }}">{{ \Illuminate\Support\Str::ucfirst($post->published_at->isoFormat('dddd D MMMM, YYYY')) }}</time>
+                                <time class="entry-date published" datetime="{{ $post->published_at->format('Y-m-d') }}">{{ \Illuminate\Support\Str::ucfirst($post->published_at->isoFormat('dddd D MMMM, YYYY')) }}</time>
                             </span>
                             <span class="meta-sep"> - </span>
                             <span class="byline"> {{ __('by') }} <span class="author vcard">

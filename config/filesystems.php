@@ -71,6 +71,8 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('robots.txt') => storage_path('app/public/robots.txt'),
+        public_path('sitemap.xml') => storage_path('app/public/sitemap.xml'),
     ],
 
 ];

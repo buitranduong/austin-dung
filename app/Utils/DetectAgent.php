@@ -23,7 +23,7 @@ class DetectAgent
         $ie9 = (bool)strstr($ua, 'MSIE 9.0');
         $ie8 = (bool)strstr($ua, 'MSIE 8.0');
 
-        $homepage = request()->routeIs('homepage');
+        $homepage = request()->routeIs('blog.feature');
 
         $htmlClass = ($mouse) ? 'mouse' : 'touch';
         if ($phone) $htmlClass = $htmlClass . ' phone';
