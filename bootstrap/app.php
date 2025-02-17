@@ -81,7 +81,6 @@ return Application::configure(basePath: dirname(__DIR__))
             };
         });
         $exceptions->renderable(function (NotFoundHttpException $e, Request $request) {
-            $hotlineSetting = new HotlineSetting();
             $generalSetting = new GeneralSetting();
 
             extract(DetectAgent::UseDevice());
@@ -99,17 +98,15 @@ return Application::configure(basePath: dirname(__DIR__))
             $og->setUrl(url(''));
             Meta::registerPackage($og)
                 ->includePackages(['homepage','common']);
-
-            return response(view('errors.404')->with([
+            $post = \App\Models\Blog\Page::findBySlug('404');
+            return response(view('theme.blog.page')->with([
                 'exception'=>$e,
                 'htmlClass'=>$htmlClass,
                 'homepage'=>$homepage,
                 'phone'=>$phone,
                 'mobile'=>$touch,
                 'ipad'=>$ipad,
-                'hotlineSetting'=>$hotlineSetting,
-                'blogPostLatest'=>CacheModelService::getBlogPostsLatest(),
-                //'postRecruitment'=>CacheModelService::getPostOfCategory('tuyen-dung')
+                'post'=>$post,
             ]), $e->getStatusCode(), $request->headers->all());
         });
     })->create();

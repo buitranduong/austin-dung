@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Cookie;
 
 class MetaTagsServiceProvider extends ServiceProvider
 {
-    private const VER = '1.1.0';
+    private const VER = '1.1.1';
     protected function packages(): void
     {
         $path = 'static/theme';

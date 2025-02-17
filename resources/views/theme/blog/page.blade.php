@@ -3,7 +3,7 @@
 @section('content')
     <main id="contents">
         <div class="container post-page">
-            <section class="post-main">
+            <section class="post-main-x">
                 <div class="header-page">
                     <h1 class="entry-title">
                         {{ $post->title }}

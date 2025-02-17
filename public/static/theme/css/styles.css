@@ -1676,7 +1676,7 @@ header.header_mobile #search-form .search-helper::before {
     position: relative;
     transition: 0.3s ease-in-out;
 }
-#footer .footer-link ul li a:before {
+#footer .footer-link ul.nav-menu li a:before {
     content: '';
     height: 1em;
     width: 1px;
