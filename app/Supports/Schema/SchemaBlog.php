@@ -24,14 +24,14 @@ class SchemaBlog
                 ->item(
                     Schema::thing()
                         ->addProperties(['@id'=>url('/')])
-                        ->name('Kho SIM số đẹp từ【150k】cập nhật 2024 tại Sim Thăng Long')
+                        ->name('Kho SIM số đẹp từ【150k】cập nhật 2024 tại Austin Dũng')
                 ),
             Schema::listItem()
                 ->position(2)
                 ->item(
                     Schema::thing()
                         ->addProperties(['@id'=>url('/')])
-                        ->name('Sim Thăng Long - Tin Sim Số Đẹp, Phong Thủy, Tử vi mới nhất')
+                        ->name('Austin Dũng - Tin Sim Số Đẹp, Phong Thủy, Tử vi mới nhất')
                 ),
         ];
         if($post->type == PostType::Post && !empty($post->category)){

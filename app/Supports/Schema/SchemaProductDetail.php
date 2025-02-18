@@ -228,7 +228,7 @@ class SchemaProductDetail
                     ->name('Đặt hàng thành công')
                     ->url(url('hoan-tat-dat-sim.html'))
                     ->target(url('hoan-tat-dat-sim.html'))
-                    ->description('Đặt hàng thành công - Sim Thăng Long')
+                    ->description('Đặt hàng thành công - Austin Dũng')
                     ->priceSpecification(
                         Schema::priceSpecification()
                             ->valueAddedTaxIncluded(false)

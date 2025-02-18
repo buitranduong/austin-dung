@@ -6,15 +6,15 @@
 <aside class="sidebar-right view_pc">
     <x-theme.aside.sidebar.right title="Bán hàng Online" className="hotline-grid">
         <div class="hotline-inner hotline">
-            <a href="tel:{{ str_replace(['.',','],'', $hotlineSetting->seller) }}" title="Call Sim Thăng Long" rel="nofollow, noindex">
-                <img src="{{ asset('static/theme/images/phone0.png') }}" alt="Chat với Sim Thăng Long" class="lazy"
+            <a href="tel:{{ str_replace(['.',','],'', $hotlineSetting->seller) }}" title="Call Austin Dũng" rel="nofollow, noindex">
+                <img src="{{ asset('static/theme/images/phone0.png') }}" alt="Chat với Austin Dũng" class="lazy"
                      width="41" height="41">
                 {{ $hotlineSetting->seller }}
             </a>
         </div>
         <div class="hotline-inner zalo">
-            <a href="{{ $hotlineSetting->zalo }}" title="Sim Thăng Long Zalo" rel="nofollow, noindex">
-                <img src="{{ asset('static/theme/images/zalo.webp') }}" loading="lazy" alt="Chat với Sim Thăng Long" class="lazy"
+            <a href="{{ $hotlineSetting->zalo }}" title="Austin Dũng Zalo" rel="nofollow, noindex">
+                <img src="{{ asset('static/theme/images/zalo.webp') }}" loading="lazy" alt="Chat với Austin Dũng" class="lazy"
                      width="41" height="41">
                 Chat tư vấn
             </a>
@@ -43,7 +43,7 @@
             <li><a href="/bai-viet/cach-mua-sim-va-thanh-toan-65/" title="Cách mua sim và thanh toán">Cách mua sim và thanh toán</a></li>
             <li><a href="/bai-viet/kiem-tra-sim-con-hay-da-ban-63/" title="Kiểm tra sim còn hay đã bán">Kiểm tra sim còn hay đã bán</a></li>
             <li><a href="/bai-viet/cach-chon-sim-hop-tuoi-27/" title="Cách chọn Sim hợp tuổi">Cách chọn Sim hợp tuổi</a></li>
-            <li><a href="/bai-viet/tai-sao-mua-duoc-sim-gia-re-tai-sim-thang-long-66/" title="Tại sao mua được sim giá rẻ tại Sim Thăng Long">Tại sao mua được sim giá rẻ tại Sim Thăng Long</a></li>
+            <li><a href="/bai-viet/tai-sao-mua-duoc-sim-gia-re-tai-sim-thang-long-66/" title="Tại sao mua được sim giá rẻ tại Austin Dũng">Tại sao mua được sim giá rẻ tại Austin Dũng</a></li>
             <li><a href="/bai-viet/nhung-dieu-can-biet-ve-chuyen-mang-giu-so-3036/" title="Những điều cần biết về chuyển mạng giữ số">Những điều cần biết về chuyển mạng giữ số</a></li>
         </ul>
     </x-theme.aside.sidebar.right>

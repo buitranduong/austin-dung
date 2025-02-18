@@ -1,6 +1,6 @@
 <!-- Start Footer -->
 <footer class="ampstart-footer px3">
-    <p class="mb2 center line-height-3">© Sim Thăng Long - Hệ thống phân phối <a href="{{ url('/') }}" title="Sim Thăng Long">Sim số đẹp</a> lớn nhất Việt Nam! </p>
+    <p class="mb2 center line-height-3">© Austin Dũng - Hệ thống phân phối <a href="{{ url('/') }}" title="Austin Dũng">Sim số đẹp</a> lớn nhất Việt Nam! </p>
     <hr/>
     <h3>HỆ THỐNG CỬA HÀNG TRÊN TOÀN QUỐC</h3>
     <h3>Hà Nội</h3>

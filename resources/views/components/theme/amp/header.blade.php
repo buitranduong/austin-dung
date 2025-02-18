@@ -14,6 +14,6 @@
         height="60"
         layout="fixed"
         class="my0 mx-auto"
-        alt="Sim Thăng Long"
+        alt="Austin Dũng"
     ></amp-img>
 </header>

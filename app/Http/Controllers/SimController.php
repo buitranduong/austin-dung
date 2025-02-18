@@ -137,7 +137,7 @@ class SimController extends Controller
                 'title'=>"Sim {$sim['id']}",
                 'description'=>"Sim {$sim['id']} thuộc nhà mạng {$sim['telco']}",
             ])->registerTags();
-            $this->meta->setTitle("SIM {$sim['id']} đã bán - Sim Thăng Long");
+            $this->meta->setTitle("SIM {$sim['id']} đã bán - Austin Dũng");
         }else{
             CacheModelService::getSimSeo($sim_data);
             $this->meta->setTitle(strip_tags($sim_data['title']));
@@ -469,7 +469,7 @@ class SimController extends Controller
         if(!$sim_order) {
             return redirect()->route('homepage');
         }
-        $this->meta->setTitle('Đặt sim thành công tại Sim Thăng Long');
+        $this->meta->setTitle('Đặt sim thành công tại Austin Dũng');
         $seoMetaData = new SeoMetaData(null, $this->meta);
         $tags = new TagsCollection($seoMetaData->getScriptPlacements());
         $this->meta->registerTags($tags);
@@ -496,7 +496,7 @@ class SimController extends Controller
         $success = false;
         $seo_page = new PageSeo();
         $seo_page->meta_data = [
-            'title'=>'Thu mua - cho vay thế chấp sim số đẹp - Sim Thăng Long',
+            'title'=>'Thu mua - cho vay thế chấp sim số đẹp - Austin Dũng',
             'meta'=>[
                 'description'=>'Thu mua sim và cho vay thế chấp bằng sim(hay còn gọi là "cầm cố sim") là dịch vụ chuyên nghiệp của simthanglong.vn dành cho khách hàng đang sử dụng sim số đẹp.'
             ]

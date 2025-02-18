@@ -6,8 +6,8 @@ return new class extends SettingsMigration
 {
     public function up(): void
     {
-        $this->migrator->add('general.site_name', 'Sim Thăng Long');
-        $this->migrator->add('general.site_description', 'Sim Thăng Long');
+        $this->migrator->add('general.site_name', 'Austin Dũng');
+        $this->migrator->add('general.site_description', 'Austin Dũng');
         $this->migrator->add('general.head_script_before', '');
         $this->migrator->add('general.head_script_after', '');
         $this->migrator->add('general.body_script_before', '');

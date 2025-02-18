@@ -1,7 +1,7 @@
 <header id="header" class="header header_pc view_pc">
     <div class="container">
         <div class="img-header">
-            <a href="/" title="Sim Thăng Long">
+            <a href="/" title="Austin Dũng">
                 <img src="{{ asset('static/theme/images/banner.jpg') }}" alt="austindung.vn" width="972" height="148">
             </a>
         </div>
