@@ -2,12 +2,7 @@
     <div class="container">
         <div class="header-top-bar">
             <a href="/" aria-label="Austin Dũng">
-                @if($homepage)
-                <img src="{{ asset('static/theme/images/sim-so-dep.svg') }}" alt="Austin Dũng" width="206" height="30">
-                <i class="ic ic-home view_tab-sp"></i>
-                @else
                 <i class="ic ic-home"></i>
-                @endif
             </a>
             <button class="header-menuBtn" type="button">
                 <i class="ic ic-menu"></i><span class="text-menu"></span>
