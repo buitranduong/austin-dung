@@ -194,7 +194,7 @@ class BlogController extends Controller
         }
         $schema->breadcrumbData($post)->registerTags();
         $schema->postData($post)->registerTags();
-        $this->_useSeoMetaTags(new BlogMetaData($post));
+        $this->_useSeoMetaTags(new BlogMetaData($post), 'article');
         return view($this->getView("theme.blog.{$post->type->value}", $view), compact('post','related_posts'))->withShortcodes();
     }
 
@@ -382,7 +382,7 @@ class BlogController extends Controller
         $this->_useSeoMetaTags(new BlogMetaData($author));
         return view('theme.blog.author', compact('author','posts'));
     }
-    private function _useSeoMetaTags(BlogMetaData $seoMetaData): void
+    private function _useSeoMetaTags(BlogMetaData $seoMetaData, $type='website'): void
     {
         $this->meta->setTitle($seoMetaData->getMetaTitle());
         $this->meta->setDescription($seoMetaData->getMetaDescription());
@@ -390,7 +390,7 @@ class BlogController extends Controller
         $tags = new TagsCollection($seoMetaData->getScriptPlacements());
         $this->meta->registerTags($tags);
         $og = new OpenGraphPackage('social');
-        $og->setType('article');
+        $og->setType($type);
         $og->setSiteName(config('app.name'));
         $og->setTitle(htmlspecialchars($seoMetaData->getMetaTitle()));
         $og->setDescription(Str::of(htmlspecialchars($seoMetaData->getMetaDescription()))->stripTags());
@@ -437,5 +437,21 @@ class BlogController extends Controller
         ];
         $this->_useSeoMetaTags(new BlogMetaData($seo));
         return view('theme.blog.search', compact('posts'));
+    }
+
+    public function feed()
+    {
+        $posts = Post::published()->paginate($this->blogSetting->post_limit);
+        return new Feed(
+            "Austin Dũng: Chuyên Gia Phong Thủy Nhà Ở & Kinh Doanh Feed",
+            $posts->getCollection(),
+            blog_route('blog.feature'),
+            "feed::rss",
+            'Blog chia sẻ kinh nghiệm phong thủy nhà ở, cuộc sống và kinh doanh. Tìm kiếm tài lộc, may mắn cùng Austin Dũng với nhiều góc nhìn trường phái phong thủy khác nhau',
+            'vi-VN',
+             'https://austindung.com/static/theme/images/banner.jpg',
+            'rss',
+            '',
+        );
     }
 }
