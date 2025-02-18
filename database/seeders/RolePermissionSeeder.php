@@ -21,7 +21,7 @@ class RolePermissionSeeder extends Seeder
 
         $roleSuperAdmin = Role::create(['name' => 'Super-Admin']);
         $userAdmin = User::factory()->create([
-            'name' => 'Admin Sim Thăng Long',
+            'name' => 'Admin Austin Dũng',
             'slug' => 'admin',
             'email' => 'info@simthanglong.vn',
             'password'=> '123456'

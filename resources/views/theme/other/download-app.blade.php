@@ -12,11 +12,11 @@
 	<meta name="yahooBOT" content="index,follow"/>
 	<meta name="slurp" content="index,follow"/>
 	<meta name="msnbot" content="index,follow"/>
-	<title>App Sim Thăng Long - App Tra Cứu Sim Số Đẹp, Sim Phong Thuỷ Số #1 Việt Nam</title>
+	<title>App Austin Dũng - App Tra Cứu Sim Số Đẹp, Sim Phong Thuỷ Số #1 Việt Nam</title>
 	<meta property="og:url" content="http://simthanglong.vn">
-	<meta property="og:title" content="App Sim Thăng Long - Ứng dụng tra cứu Sim Số Đẹp đẳng cấp số #1 Việt Nam">
-	<meta property="og:description" content="App Sim Thăng Long - Hỗ trợ khủng cho cộng tác viên">
-	<meta name="description" content="App Sim Thăng Long - Hỗ trợ khủng cho cộng tác viên"/>
+	<meta property="og:title" content="App Austin Dũng - Ứng dụng tra cứu Sim Số Đẹp đẳng cấp số #1 Việt Nam">
+	<meta property="og:description" content="App Austin Dũng - Hỗ trợ khủng cho cộng tác viên">
+	<meta name="description" content="App Austin Dũng - Hỗ trợ khủng cho cộng tác viên"/>
 	<meta name="keywords" content=" app sim thang long, ung dung tra cuu sim so dep, cong tac vien ban sim"/>
 	<meta property="article:tag" content="Tra cuu sim so dep, ung dung tim kiem sim so dep"/>
 	<meta property="article:tag" content="Sim tam hoa, sim tu quy gia re, tra cuu sim nam sinh"/>
@@ -522,7 +522,7 @@
 		}
 	</style>
 
-	<title>Tải ứng dụng Sim Thăng Long</title>
+	<title>Tải ứng dụng Austin Dũng</title>
 
 </head>
 
@@ -545,7 +545,7 @@
 
 		<div class="row">
 			<div class="col-md-8 col-sm-12 main-content">
-				<h1 class="funnytext">App <br/>Sim Thăng Long</h1>
+				<h1 class="funnytext">App <br/>Austin Dũng</h1>
 				<p>- Hỗ trợ cộng tác viên: <strong><a href="tel:0941.303.333">0941.303.333</a> </strong></p>
 				<p>- Ứng dụng tra cứu sim số đẹp, sim phong thuỷ #1 tại Việt Nam</p>
 				<p>- Tải ngay và đăng ký cộng tác viên hưởng nhiều ưu đãi</p>
@@ -619,8 +619,8 @@
 				<img src="{{ asset('static/images/icon_download/sim-so-dep.svg') }}" alt="Footer-Logo">
 			</div>
 			<div class="col-md-8 col-sm-8 footer-nav">
-				© 2019 App Sim Thăng Long.<br>
-				App Sim Thăng Long là ứng dụng tra cứu sim số đẹp hỗ trợ cộng tác viên của <strong><a href="https://simthanglong.vn" style="color: #b2bd0a;">SimThangLong.Vn </a></strong>
+				© 2019 App Austin Dũng.<br>
+				App Austin Dũng là ứng dụng tra cứu sim số đẹp hỗ trợ cộng tác viên của <strong><a href="https://simthanglong.vn" style="color: #b2bd0a;">SimThangLong.Vn </a></strong>
 			</div>
 
 		</div><!-- Row End -->

@@ -987,8 +987,8 @@ class Helper {
             } else if ($mid) {
                 if ($h) {
                     $title =  __('SIM đuôi :mid giữa Đầu :h',['mid'=>$mid, 'h'=>$h]);
-                    $meta_title = __('SIM đuôi :mid giữa Đầu :h giá rẻ tại Sim Thăng Long',['mid'=>$mid,'h'=>$h]);
-                    $description = __('SIM đuôi :mid giữa Đầu :h giá rẻ tại Sim Thăng Long',['mid'=>$mid,'h'=>$h]);
+                    $meta_title = __('SIM đuôi :mid giữa Đầu :h giá rẻ tại Austin Dũng',['mid'=>$mid,'h'=>$h]);
+                    $description = __('SIM đuôi :mid giữa Đầu :h giá rẻ tại Austin Dũng',['mid'=>$mid,'h'=>$h]);
                 } else {
                     $title =  __('SIM đuôi :mid giữa',['mid'=>$mid]);
                     $meta_title = __('SIM đuôi :mid giữa - SIM số đẹp :mid giữa',['mid'=>$mid]);
@@ -999,7 +999,7 @@ class Helper {
                 $telco = self::getSimTel($h);
                 $title =  __('SIM đầu số :h',['h'=>$h]);
                 $meta_title = __('SIM :telco đầu :h - SIM đầu số :h chỉ từ 【199K】',['h'=>$h, 'telco'=>$telco['name'] ?? '']);
-                $description = __('SIM đầu số :h thuộc dòng SIM số đẹp của nhà mạng Mobifone đang được bán chỉ từ 【199K】 tại Sim Thăng Long',['h'=>$h]);
+                $description = __('SIM đầu số :h thuộc dòng SIM số đẹp của nhà mạng Mobifone đang được bán chỉ từ 【199K】 tại Austin Dũng',['h'=>$h]);
             }
             return [
                 'title' => $title,

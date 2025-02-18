@@ -41,7 +41,7 @@
                 <div class="entry-content">
                     {!! $post->content !!}
                 </div>
-{{--                <x-theme.section.blog.table-sim-free title="SIM THĂNG LONG TẶNG SIM SỐ ĐẸP"/>--}}
+{{--                <x-theme.section.blog.table-sim-free title="Austin Dũng TẶNG SIM SỐ ĐẸP"/>--}}
                 @if($post->tags->count())
                     <footer class="entry-footer">
                         <div class="post-tags-links">

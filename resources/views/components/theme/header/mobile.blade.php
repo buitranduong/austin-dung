@@ -1,9 +1,9 @@
 <header id="header" class="header header_mobile view_tab-sp">
     <div class="container">
         <div class="header-top-bar">
-            <a href="/" aria-label="Sim Thăng Long">
+            <a href="/" aria-label="Austin Dũng">
                 @if($homepage)
-                <img src="{{ asset('static/theme/images/sim-so-dep.svg') }}" alt="Sim Thăng Long" width="206" height="30">
+                <img src="{{ asset('static/theme/images/sim-so-dep.svg') }}" alt="Austin Dũng" width="206" height="30">
                 <i class="ic ic-home view_tab-sp"></i>
                 @else
                 <i class="ic ic-home"></i>

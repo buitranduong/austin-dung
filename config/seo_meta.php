@@ -7,17 +7,17 @@ return [
         ['name'=>'theme-color', 'content'=>'#20373B'],
 
         ['name'=>'viewport', 'content'=>'width=device-width, initial-scale=1'],
-        ['name'=>'description', 'content'=>'Kho SIM 35tr số đẹp tại Sim Thăng Long mới update 2024 - Miễn Phí Đăng ký chính chủ - Giá rẻ chỉ từ 【150k】- Miễn Phí Giao SIM Toàn Quốc ✴️ Mua SIM số đẹp hãy chọn SimThangLong.vn'],
+        ['name'=>'description', 'content'=>'Kho SIM 35tr số đẹp tại Austin Dũng mới update 2024 - Miễn Phí Đăng ký chính chủ - Giá rẻ chỉ từ 【150k】- Miễn Phí Giao SIM Toàn Quốc ✴️ Mua SIM số đẹp hãy chọn SimThangLong.vn'],
         ['name'=>'keywords', 'content'=>'sim so dep, sim số đẹp giá rẻ'],
         ['name'=>'author', 'content'=>'SimThangLong'],
 
-        ['property'=>'og:title', 'content'=>'Kho SIM số đẹp từ【150k】cập nhật 2024 tại Sim Thăng Long'],
-        ['property'=>'og:description', 'content'=>'Kho SIM 35tr số đẹp tại Sim Thăng Long mới update 2024 - Miễn Phí Đăng ký chính chủ - Giá rẻ chỉ từ 【150k】- Miễn Phí Giao SIM Toàn Quốc ✴️ Mua SIM số đẹp hãy chọn SimThangLong.vn'],
+        ['property'=>'og:title', 'content'=>'Kho SIM số đẹp từ【150k】cập nhật 2024 tại Austin Dũng'],
+        ['property'=>'og:description', 'content'=>'Kho SIM 35tr số đẹp tại Austin Dũng mới update 2024 - Miễn Phí Đăng ký chính chủ - Giá rẻ chỉ từ 【150k】- Miễn Phí Giao SIM Toàn Quốc ✴️ Mua SIM số đẹp hãy chọn SimThangLong.vn'],
         ['property'=>'og:image', 'content'=>'https://static.simthanglong.vn/images/sim-so-dep-sim-thang-long.jpg'],
-        ['property'=>'og:site_name', 'content'=>'Sim Thăng Long'],
+        ['property'=>'og:site_name', 'content'=>'Austin Dũng'],
         ['property'=>'fb:app_id', 'content'=>'121773557961724'],
 
-        ['name'=>'DC.title', 'content'=>'Sim Thăng Long'],
+        ['name'=>'DC.title', 'content'=>'Austin Dũng'],
         ['name'=>'geo.region', 'content'=>'VN'],
         ['name'=>'geo.placename', 'content'=>'Hanoi'],
         ['name'=>'geo.position', 'content'=>'21.024090555843472, 105.83262432804791'],

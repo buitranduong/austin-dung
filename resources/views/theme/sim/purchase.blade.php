@@ -5,7 +5,7 @@
         <section class="thu-mua-sim-success">
             <img src="/static/theme/images/like.png" alt="" width="100" height="95">
             <h1>Gửi yêu cầu thành công!</h1>
-            <p>Cảm ơn anh/chị đã cho Sim Thăng Long cơ hội được phục vụ<br>
+            <p>Cảm ơn anh/chị đã cho Austin Dũng cơ hội được phục vụ<br>
                 Chúng tôi sẽ liên lạc lại bằng điện thoại trong ít phút nữa.</p>
         </section>
         <div class="text-center link-back-page view_pc">
@@ -26,7 +26,7 @@
                     <a href="tel:0901686699"><span class="clr-red">0901.68.6699</span></a>
                     để được tư vấn chi tiết!
                 </p>
-                <h3 class="sub-title1">LỢI ÍCH KHI GIAO DỊCH TẠI SIM THĂNG LONG</h3>
+                <h3 class="sub-title1">LỢI ÍCH KHI GIAO DỊCH TẠI Austin Dũng</h3>
                 <p>Phương châm của chúng tôi là mang lại lợi ích tốt nhất cho khách hàng: </p>
                 <ul class="list-item-price">
                     <li>
@@ -58,7 +58,7 @@
                 @include('components.theme.section.form-purchase')
 
                 <h3 class="sub-title1">CÁC LOẠI SIM THU MUA VÀ CHO VAY THẾ CHẤP</h3>
-                <p>Hiện tại <strong>Sim Thăng Long</strong> thu mua và cho vay thế chấp các dạng sim số đẹp sau:</p>
+                <p>Hiện tại <strong>Austin Dũng</strong> thu mua và cho vay thế chấp các dạng sim số đẹp sau:</p>
                 <ul class="list-item-price">
                     <li>
                         <img alt="" src="/static/theme/images/muiten2.png" height="9" width="20">Sim được
@@ -78,7 +78,7 @@
                     </li>
                 </ul>
                 <h3 class="sub-title1">ĐIỀU KIỆN THU MUA VÀ CHO VAY THẾ CHẤP</h3>
-                <p>Điều kiện của <strong>Sim Thăng Long</strong> rất đơn giản, chỉ cần:</p>
+                <p>Điều kiện của <strong>Austin Dũng</strong> rất đơn giản, chỉ cần:</p>
                 <ul class="list-item-price">
                     <li>
                         <img alt="" src="/static/theme/images/muiten2.png" height="9" width="20">Sim đứng

@@ -9033,7 +9033,7 @@ class LaSoTutru
         imagettftext($img, 24, 0, 790, 1182, $black, $fontRegular, $napAm['ngay']['menh']);
         imagettftext($img, 24, 0, 1100, 1182, $black, $fontRegular, $napAm['gio']['menh']);
 
-        imagettftext($img, 22, 0, 20, 1238, $mauBanQuyen, $fontRegular, "Lá số bát tự (tứ trụ) theo Sim Thăng Long, Website: simthanglong.vn");
+        imagettftext($img, 22, 0, 20, 1238, $mauBanQuyen, $fontRegular, "Lá số bát tự (tứ trụ) theo Austin Dũng, Website: simthanglong.vn");
 // dai van tieu van
         imagettftext($img, 24, 0, 20, 1290, $green, $fontRegular, "ĐẠI VẬN & TIỂU VẬN:");
         imagettftext($img, 16, 0, 370, 1290, $green, $fontRegular, "Đại vận bắt đầu lúc");

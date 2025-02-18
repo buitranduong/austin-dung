@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <div class="search-result__inner">
-                        <img class="search-result__img lazy" src="{{ $content_data['menh_chu']['con_giap'] }}" alt="Sim thăng long 12 con giáp">
+                        <img class="search-result__img lazy" src="{{ $content_data['menh_chu']['con_giap'] }}" alt="Austin Dũng 12 con giáp">
                         <ul>
                             <li>
                                 <strong>Thân chủ</strong>: {{ $content_data['menh_chu']['than_chu'] }}
