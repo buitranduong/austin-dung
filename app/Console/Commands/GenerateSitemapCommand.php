@@ -47,8 +47,8 @@ class GenerateSitemapCommand extends Command
                         $data[] = Url::create(blog_route('blog.post', [$post->slug]))
                             ->setLastModificationDate(Carbon::create($post->published_at))
                             ->addNews(
-                              'SimThangLong.vn',
-                              'vi',
+                              'austindung.com',
+                              'vi_VN',
                               $title,
                               $post->published_at,
                             );

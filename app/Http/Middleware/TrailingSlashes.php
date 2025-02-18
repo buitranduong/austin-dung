@@ -31,7 +31,7 @@ class TrailingSlashes
                 return Redirect::to(config('app.url').Str::rtrim($request->getRequestUri(), '/'), 301);
             }
         }else{
-            if (!preg_match('~(?:[^/]|^)/$~', $request->getRequestUri()))
+            if (!preg_match('~(?:[^/]|^)/$~', $request->getRequestUri()) && !Str::endsWith($request->getRequestUri(), ['.xml','.txt']))
             {
                 return Redirect::away(Str::rtrim($request->getRequestUri(), '/').'/', 301);
             }
