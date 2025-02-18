@@ -55,7 +55,7 @@ class GenerateSitemapCommand extends Command
                     }
                     Sitemap::create()
                         ->add($data)
-                        ->writeToFile(public_path("{$file}-news-sitemap.xml"));
+                        ->writeToFile(storage_path("app/public/{$file}-news-sitemap.xml"));
                 }
             }else{
                 $posts = $class->newInstance()
@@ -83,7 +83,7 @@ class GenerateSitemapCommand extends Command
                     }
                     Sitemap::create()
                         ->add($data)
-                        ->writeToFile(public_path("{$file}-sitemap.xml"));
+                        ->writeToFile(storage_path("app/public/{$file}-sitemap.xml"));
                 }
             }
             $this->info('Sitemap generated successfully.');
