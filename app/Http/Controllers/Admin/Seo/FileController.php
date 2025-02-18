@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Seo;
 use App\Http\Controllers\Controller;
 use App\Models\Seo\FileCertificate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 
@@ -89,11 +90,12 @@ class FileController extends Controller
     private function _writeFileToRoot(FileCertificate $file): void
     {
         try{
-            $path = public_path();
+            $path = storage_path('app/public');
             if (!File::isWritable($path)){
-                File::chmod($path, 0777);
+                File::chmod($path, 0775);
             }
-            File::put($file->name, $file->content);
+            File::put("$path/$file->name", $file->content);
+            Artisan::call('storage:link');
         }catch (\Exception $exception){
             Log::error($exception);
         }
