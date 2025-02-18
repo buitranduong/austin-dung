@@ -71,6 +71,8 @@ Route::controller(BlogController::class)->group(function() {
     Route::get('/', 'feature')
         ->middleware('slashes:add')
         ->name('blog.feature');
+    Route::get('/feed', 'feed')
+        ->middleware('slashes:add');
     Route::get('/chu-de/{slug}/{view?}', 'category')
         ->middleware('slashes:add')
         ->whereIn('view',['feed','json'])
