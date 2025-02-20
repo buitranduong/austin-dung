@@ -8,10 +8,10 @@
         <nav>
             <ul>
                 <li><a href="/">TRANG CHỦ</a></li>
-                <li><a href="/author/austindung">GIỚI THIỆU</a></li>
-                <li><a href="/chu-de/tin-nguong">TÍN NGƯỠNG</a></li>
-                <li><a href="/chu-de/cung-hoang-dao">CUNG HOÀNG ĐẠO</a></li>
-                <li><a href="/lien-he">LIÊN HỆ</a></li>
+                <li><a href="/author/austindung/">GIỚI THIỆU</a></li>
+                <li><a href="/chu-de/tin-nguong/">TÍN NGƯỠNG</a></li>
+                <li><a href="/chu-de/cung-hoang-dao/">CUNG HOÀNG ĐẠO</a></li>
+                <li><a href="/lien-he/">LIÊN HỆ</a></li>
             </ul>
         </nav>
     </div>

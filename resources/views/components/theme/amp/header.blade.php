@@ -8,12 +8,4 @@
     >
         ☰
     </div>
-    <amp-img
-        src="{{ asset('static/theme/images/STL.png') }}"
-        width="373"
-        height="60"
-        layout="fixed"
-        class="my0 mx-auto"
-        alt="Austin Dũng"
-    ></amp-img>
 </header>

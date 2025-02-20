@@ -86,12 +86,14 @@ Route::controller(BlogController::class)->group(function() {
         ->whereIn('view',['feed','json'])
         ->name('blog.author');
     Route::get('search', 'search')->name('blog.search');
-    Route::get('/{slug}/{view?}', 'post')
-        ->middleware('slashes:add')
-        ->where('slug', '^(?!admin).*')
-        ->whereIn('view',['feed','json'])
-        ->name('blog.post');
     Route::get('/{slug}/amp', 'amp')
         ->middleware('slashes:remove')
         ->name('blog.post.amp');
+    Route::get('/{slug}/{view?}/', 'post')
+        ->middleware('slashes:add')
+        ->name('blog.post');
+    Route::get('/{slug}/', 'post')
+        ->middleware('slashes:add')
+        ->where('slug', '^(?!admin).*')
+        ->name('blog.post');
 });
