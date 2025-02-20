@@ -80,7 +80,7 @@ class BlogController extends Controller
         if ($allCategories) {
             foreach ($allCategories as $category) {
                 $this->meta
-                    ->addLink('alternate'.$category->id, ['rel'=>'alternate','href'=>blog_route('blog.category',[$category->slug]),'hreflang'=>'vi_VN'])
+                    //->addLink('alternate'.$category->id, ['rel'=>'alternate','href'=>blog_route('blog.category',[$category->slug]),'hreflang'=>'vi_VN'])
                     ->addLink('alternate-rss'.$category->id, [
                         'href'=>blog_route('blog.category',[$category->slug, 'view'=>'json']),
                         'rel'=>'alternate',
@@ -161,7 +161,7 @@ class BlogController extends Controller
             default:
                 if($post->type == PostType::Post){
                     $this->meta
-                        ->addLink('alternate', ['href'=>blog_route('blog.post',[$post->slug]),'hreflang'=>'vi_VN'])
+                        //->addLink('alternate', ['href'=>blog_route('blog.post',[$post->slug]),'hreflang'=>'vi_VN'])
                         ->addLink('alternate-rss', [
                             'href'=>blog_route('blog.post',[$post->slug, 'view'=>'json']),
                             'rel'=>'alternate',
@@ -268,7 +268,7 @@ class BlogController extends Controller
             );
         }
         $this->meta
-            ->addLink('alternate', ['href'=>blog_route('blog.category',[$category->slug]),'hreflang'=>'vi_VN'])
+            //->addLink('alternate', ['href'=>blog_route('blog.category',[$category->slug]),'hreflang'=>'vi_VN'])
             ->addLink('alternate-rss', [
                 'href'=>blog_route('blog.category',[$category->slug, 'view'=>'json']),
                 'rel'=>'alternate',
@@ -309,7 +309,7 @@ class BlogController extends Controller
             );
         }
         $this->meta
-            ->addLink('alternate', ['href'=>blog_route('blog.tag',[$tag->slug]),'hreflang'=>'vi_VN'])
+            //->addLink('alternate', ['href'=>blog_route('blog.tag',[$tag->slug]),'hreflang'=>'vi_VN'])
             ->addLink('alternate-rss', [
                 'href'=>blog_route('blog.tag',[$tag->slug, 'view'=>'json']),
                 'rel'=>'alternate',
@@ -355,7 +355,7 @@ class BlogController extends Controller
             );
         }
         $this->meta
-            ->addLink('alternate', ['href'=>blog_route('blog.author',[$author->slug]),'hreflang'=>'vi_VN'])
+            //->addLink('alternate', ['href'=>blog_route('blog.author',[$author->slug]),'hreflang'=>'vi_VN'])
             ->addLink('alternate-rss', [
                 'href'=>blog_route('blog.author',[$author->slug, 'view'=>'json']),
                 'rel'=>'alternate',
