@@ -17,25 +17,19 @@
     <nav class="ampstart-sidebar-nav ampstart-nav">
         <ul class="list-reset m0 p0 ampstart-label">
             <li class="ampstart-nav-item">
-                <a class="ampstart-nav-link" href="{{ url('/') }}">SIM SỐ ĐẸP</a>
+                <a class="ampstart-nav-link" href="{{ url('/') }}">TRANG CHỦ</a>
             </li>
             <li class="ampstart-nav-item">
-                <a class="ampstart-nav-link" href="{{ url('sim-phong-thuy') }}">SIM PHONG THỦY</a>
+                <a class="ampstart-nav-link" href="{{ blog_route('blog.author',['slug'=>'austindung']) }}">GIỚI THIỆU</a>
             </li>
             <li class="ampstart-nav-item">
-                <a class="ampstart-nav-link" href="{{ url('sim-dep-tra-gop') }}">SIM TRẢ GÓP</a>
+                <a class="ampstart-nav-link" href="{{ blog_route('blog.category',['slug'=>'tin-nguong']) }}">TÍN NGƯỠNG</a>
             </li>
             <li class="ampstart-nav-item">
-                <a class="ampstart-nav-link" href="{{ url('dinh-gia-sim-ai') }}">ĐỊNH GIÁ SIM</a>
+                <a class="ampstart-nav-link" href="{{ blog_route('blog.category',['slug'=>'cung-hoang-dao']) }}">CUNG HOÀNG ĐẠO</a>
             </li>
             <li class="ampstart-nav-item">
-                <a class="ampstart-nav-link" href="{{ url('thu-mua-sim-so-dep') }}">CẦM SIM - THU MUA SIM</a>
-            </li>
-            <li class="ampstart-nav-item">
-                <a class="ampstart-nav-link" href="{{ blog_route('blog.post',['cach-mua-sim-va-thanh-toan-65']) }}">THANH TOÁN</a>
-            </li>
-            <li class="ampstart-nav-item">
-                <a class="ampstart-nav-link" href="{{ blog_route('blog.feature') }}">TIN TỨC</a>
+                <a class="ampstart-nav-link" href="{{ blog_route('blog.post',['slug'=>'lien-he']) }}">LIÊN HỆ</a>
             </li>
         </ul>
     </nav>

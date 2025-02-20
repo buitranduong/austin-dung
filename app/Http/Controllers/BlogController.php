@@ -99,7 +99,7 @@ class BlogController extends Controller
             'href'=>blog_route('blog.feature'),
         ]);
         $homepage = new Category();
-        $homepage->featured_image = 'austindung.jpg';
+        $homepage->featured_image = 'uploads/2025/02/master-austindung-logo.webp';
         $this->_useSeoMetaTags(new BlogMetaData($homepage));
         return view('theme.blog.feature', compact('posts','feature_post','phong_thuy_sim_posts','sim_so_dep_posts'));
     }

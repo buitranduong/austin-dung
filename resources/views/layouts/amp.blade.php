@@ -152,6 +152,21 @@
             margin: 0;
             text-decoration: none;
         }
+        footer ul.ampstart-label{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        footer .ampstart-nav-link{
+            color: #bfbfbf;
+            text-decoration: none;
+            padding: 5px 7px;
+            position: relative;
+            transition: 0.3s ease-in-out;
+        }
     </style>
     {!! Meta::placement('head_script_after')->toHtml() !!}
 </head>
