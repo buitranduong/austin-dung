@@ -91,6 +91,7 @@ Route::controller(BlogController::class)->group(function() {
         ->name('blog.post.amp');
     Route::get('/{slug}/{view?}/', 'post')
         ->middleware('slashes:add')
+        ->where('slug', '^(?!admin).*')
         ->name('blog.post.feed');
     Route::get('/{slug}/', 'post')
         ->middleware('slashes:add')
